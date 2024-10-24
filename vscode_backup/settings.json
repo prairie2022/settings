@@ -1,0 +1,320 @@
+{
+    // vim
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j", "k"],
+            "after" : ["<Esc>"]
+        },
+        {
+            "before": ["j", "j"],
+            "after" : ["<Esc>", "A"]
+        },
+        {
+            "before": ["J", "J"],
+            "after" : ["<Esc>", "A"]
+        },
+        {
+            "before" : [",", "v"],
+            "after" : ["^", "{", "-", "1", "}"]
+        },
+        {
+            "before": [",", "o"],
+            "after" : ["\\", "o", "p", "e", "r", "a", "t", "o", "r", "n", "a", "m", "e", "{", "}", "<Esc>", "i"]
+        },
+        {
+            "before": [",", "b"],
+            "after" : ["\\", "m", "a", "t", "h", "b", "b", " "]
+        },
+        {
+            "before": [",", "s"],
+            "after" : ["\\", "{", "\\", "}", "<Esc>", "h", "i"]
+        },
+        {
+            "before": [",", "a"],
+            "after" : ["\\", "f", "o", "r", "a", "l", "l", "\\", ","]
+        },
+        {
+            "before": [",", "e"],
+            "after" : ["\\", "e", "x", "i", "s", "t", "s", "\\", ","]
+        },
+        {
+            "before": [",", "t"],
+            "after" : ["\\", "t", "e", "x", "t", "{", "}", "<Esc>", "i"]
+        },
+        {
+            "before": [",", "d"],
+            "after" : ["%", "<Esc>", "?", "\\", "$", "<CR>", "a", "\\", "d", "i", "s", "p", "l", "a", "y", "s", "t", "y", "l", "e", " ", "<Esc>", "/", "%", "<CR>", "s"]
+        },
+    ],
+    "vim.normalModeKeyBindings": [
+        // display math mode
+        {
+            "before": ["z", "L"],
+            "after" : ["?", "\\", "$", "<CR>", "a", "<BS>", "<CR>", "\\", "[", "<CR>", "<Esc>"]
+        },
+        {
+            "before": ["z", "R"],
+            "after" : ["/", "\\", "$", "<CR>", "a", "<BS>", "<CR>", "\\", "]", "<CR>", "<Esc>"]
+        },
+        {
+            "before": ["z", "E"],
+            "after" : ["?", "\\", "$", "<CR>", "a", "<BS>", "<CR>", "\\", "[", "<CR>", "<Esc>", "/", "\\", "$", "<CR>", "a", "<BS>", "<CR>", "\\", "]", "<CR>", "<Esc>"]
+        }
+    ],
+
+    // code-runner
+    "code-runner.saveFileBeforeRun": true,
+    "code-runner.runInTerminal": true,
+    "code-runner.executorMap": {
+        "javascript": "node",
+        "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
+        "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt && rm $dir$fileNameWithoutExt",
+        "zig": "zig run",
+        "cpp": "cd $dir && g++ $fileName -std=c++23 -o $fileNameWithoutExt && $dir$fileNameWithoutExt && rm $dir$fileNameWithoutExt",
+        "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "php": "php",
+        "python": "python -u",
+        "perl": "perl",
+        "perl6": "perl6",
+        "ruby": "ruby",
+        "go": "go run",
+        "lua": "lua",
+        "groovy": "groovy",
+        "powershell": "powershell -ExecutionPolicy ByPass -File",
+        "bat": "cmd /c",
+        "shellscript": "bash",
+        "fsharp": "fsi",
+        "csharp": "scriptcs",
+        "vbscript": "cscript //Nologo",
+        "typescript": "ts-node",
+        "coffeescript": "coffee",
+        "scala": "scala",
+        "swift": "swift",
+        "julia": "julia",
+        "crystal": "crystal",
+        "ocaml": "ocaml",
+        "r": "Rscript",
+        "applescript": "osascript",
+        "clojure": "lein exec",
+        "haxe": "haxe --cwd $dirWithoutTrailingSlash --run $fileNameWithoutExt",
+        "rust": "cd $dir && rustc $fileName && $dir$fileNameWithoutExt",
+        "racket": "racket",
+        "scheme": "csi -script",
+        "ahk": "autohotkey",
+        "autoit": "autoit3",
+        "dart": "dart",
+        "pascal": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
+        "d": "cd $dir && dmd $fileName && $dir$fileNameWithoutExt",
+        "haskell": "runghc",
+        "nim": "nim compile --verbosity:0 --hints:off --run",
+        "lisp": "sbcl --script",
+        "kit": "kitc --run",
+        "v": "v run",
+        "sass": "sass --style expanded",
+        "scss": "scss --style expanded",
+        "less": "cd $dir && lessc $fileName $fileNameWithoutExt.css",
+        "FortranFreeForm": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "fortran-modern": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "fortran_fixed-form": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "fortran": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "sml": "cd $dir && sml $fileName",
+        "mojo": "mojo run",
+        "erlang": "escript",
+        "spwn": "spwn build",
+        "pkl": "cd $dir && pkl eval -f yaml $fileName -o $fileNameWithoutExt.yaml",
+        "gleam": "gleam run -m $fileNameWithoutExt"
+    },
+    "notebook.showFoldingControls": "always",
+    "editor.showFoldingControls": "always",
+    "markdown.preview.typographer": true,
+    "terminal.integrated.enableMultiLinePasteWarning": "never",
+    "workbench.iconTheme": "vs-minimal",
+    "editor.wordWrap": "on",
+
+    // https://hackmd.io/@DextinChen/VSCode-LaTeX-setting
+    // 編譯LaTeX的工具設定
+    "latex-workshop.latex.tools": [
+        { // for FHW
+            "name": "fhw",
+            "command": "latexmk",
+            "args": [
+                "-synctex=1", // sync source & pdf
+                "-file-line-error", // show error line
+                "-shell-escape",
+                "-pdfxe",
+                "-halt-on-error",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "xelatex",
+            "command": "xelatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-halt-on-error",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "xelatex-with-shell-escape",
+            "command": "xelatex",
+            "args": [
+                "--shell-escape",
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-halt-on-error",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-halt-on-error",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "pdflatex-with-shell-escape",
+            "command": "pdflatex",
+            "args": [
+                "--shell-escape",
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-halt-on-error",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "-halt-on-error",
+                "%DOC%"
+            ]
+        },
+        // {
+            //    "name": "bibtex",
+            //    "command": "bibtex",
+            //    "args": [
+        //        "%DOCFILE%"
+        //    ]
+        // },
+        // {
+        //    "name": "makeindex",
+        //    "command": "makeindex",
+        //    "args": [
+            //        "%DOCFILE%"
+        //    ]
+        // }
+    ],
+    
+    // 選擇LaTeX編譯工具的指令，以及工具的順序
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "FHW",
+            "tools": [
+                "fhw"
+            ]
+        },
+        //　目前只使用xelatex和bibtex 
+        {
+            "name": "xelatex",
+            "tools": [
+                "xelatex"
+            ]
+        }, 
+        {
+            "name": "xelatex with shell escape",
+            "tools": [
+                "xelatex-with-shell-escape"
+            ]
+        },
+        {
+            "name": "xelatex -> bibtex -> xelatex*2",
+            "tools": [
+                "xelatex",
+                "bibtex",
+                "xelatex",
+                "xelatex"
+            ]
+        },
+        {
+            "name": "bibtex",
+            "tools": [
+                "bibtex",
+            ]
+        },
+    ],
+    
+    // 選擇pdf瀏覽器，可選browser/tab/external
+    "latex-workshop.view.pdf.viewer": "tab",
+    
+    // 每次編譯前，刪除之前的output檔
+    "latex-workshop.latex.clean.enableed": true,
+    "latex-workshop.latex.clean.fileTypes": [
+        "*.aux",
+        "*.bbl",
+        "*.blg",
+        "*.idx",
+        "*.ind",
+        "*.lof",
+        "*.lot",
+        "*.out",
+        "*.toc",
+        "*.acn",
+        "*.acr",
+        "*.alg",
+        "*.glg",
+        "*.glo",
+        "*.gls",
+        "*.ist",
+        "*.fls",
+        "*.log",
+        "*.fdb_latexmk"
+    ],
+    "latex-workshop.latex.autoClean.run": "onBuilt",
+    "latex-workshop.synctex.afterBuild.enabled": true,
+
+    // markdown
+    "markdown.preview.breaks": true,
+    "markdown-preview-enhanced.enableExtendedTableSyntax": true,
+    "markdown-preview-enhanced.enableHTML5Embed": true,
+    "markdown-preview-enhanced.enableTypographer": true,
+    "markdown-preview-enhanced.HTML5EmbedIsAllowedHttp": true,
+    "markdown-preview-enhanced.HTML5EmbedUseLinkSyntax": true,
+    "markdown-preview-enhanced.mermaidTheme": "dark",
+    "markdown-preview-enhanced.previewTheme": "one-dark.css",
+    "markdown-preview-enhanced.revealjsTheme": "black.css",
+    "markdown-preview-enhanced.enablePreviewZenMode": true,
+    "markdown.extension.print.theme": "dark",
+    "markdown.extension.list.indentationSize": "inherit",
+    "markdown-preview-enhanced.latexEngine": "xelatex",
+    "markdown-preview-enhanced.mathRenderingOption": "MathJax",
+    "editor.wordBasedSuggestions": "off",
+    "MarkdownPaste.nameBase": "${datetime|MMDD-HHmmss}",
+    "MarkdownPaste.path": "${fileDirname}/image",
+    "MarkdownPaste.enableAI": true,
+    "MarkdownPaste.silence": true,
+    
+    // display
+    "workbench.startupEditor": "none",
+    "files.exclude": {
+        "**/.*": true,
+        "**/*.html": true,
+    },
+    "security.workspace.trust.banner": "always",
+    "window.newWindowProfile": "Default",
+    "editor.minimap.enabled": false,
+}

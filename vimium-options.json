@@ -1,0 +1,45 @@
+{
+  "settingsVersion": "2.1.2",
+  "exclusionRules": [
+    {
+      "passKeys": "",
+      "pattern": "https://mail\\.google\\.com/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https://www\\.youtube\\.com/watch*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https://drive\\.google\\.com/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https://www\\.overleaf\\.com/project/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https://ani\\.gamer\\.com\\.tw/animeVideo.php*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https://monkeytype\\.com*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https://hackmd\\.io/(?!\\?)(?!@)(?!bookmark$)(?!recent$)*$"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https://keep\\.google\\.com/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https://www\\.notion\\.so/(\\w|\\-)+$"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https://webosu\\.online/*"
+    }
+  ]
+}
