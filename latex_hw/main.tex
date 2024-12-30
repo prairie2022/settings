@@ -1,0 +1,103 @@
+\documentclass[12pt, a4paper]{article}
+
+%%%%%%%%%% basic functions %%%%%%%%%%
+
+\usepackage[margin=3cm]{geometry} % 邊界、紙張、頁眉、頁腳、頁框，設定時可用 \geometry{<op1>, <op2>, ...}
+\usepackage[onehalfspacing]{setspace}
+\usepackage{comment}
+
+%%%%%%%%%% text fonts %%%%%%%%%%
+
+\usepackage{lmodern}
+\usepackage{fontspec}
+\usepackage[fallback]{xeCJK}
+
+\XeTeXlinebreaklocale "zh"
+\XeTeXlinebreakskip = 0pt plus 1pt
+
+% \begin{comment} % 本地用
+    \setCJKmainfont[Path=/home/prairie2022/texmf/fonts/noto-regular/, AutoFakeSlant=.2, BoldFont=NotoSerifCJKtc-Bold.otf]{NotoSerifCJKtc-Regular.otf}
+    \setCJKsansfont[Path=/home/prairie2022/texmf/fonts/noto-regular/, BoldFont=NotoSansCJKtc-Bold.ttf, AutoFakeSlant=.2]{NotoSansCJKtc-Regular.otf}
+    \setCJKmonofont[Path=/home/prairie2022/texmf/fonts/noto-regular/, Scale=0.9, AutoFakeSlant=.2]{NotoSansMonoCJKtc-Regular.otf}
+% \end{comment}
+
+\begin{comment} % Overleaf 使用
+    \setCJKmainfont[AutoFakeSlant=.2]{Noto Serif CJK TC}
+    \setCJKsansfont[AutoFakeSlant=.2]{Noto Sans CJK TC}
+    \setCJKmonofont{Noto Sans Mono CJK TC}
+\end{comment}
+
+%%%%%%%%%% math %%%%%%%%%%
+
+\usepackage{bm} % \bm{粗體字}
+\usepackage{mathrsfs} % \mathscr{花體字}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{yhmath} % 優化排版
+\usepackage{mathtools} % 額外排版功能
+% \DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
+\usepackage{esint} % 積分符號
+\usepackage{esdiff} % \diff(p)(*)
+\usepackage{cancel} % \cancel{刪除線} \bcancel{反刪除線} \xcancel{交叉刪除線}
+\usepackage{centernot} % \centernot{}
+% \usepackage{siunitx} % \si{單位} \SI{數值}{單位}
+
+%%%%%%%%%% other items %%%%%%%%%%
+
+\usepackage{xcolor} % 顏色
+\usepackage[inline]{enumitem} % [label= , itemjoin= ]
+\usepackage{fancyhdr} % 頁首頁尾
+\usepackage{graphicx} % 插入圖片 \includegraphics[]{}
+\usepackage[normalem]{ulem} % 下劃線
+\usepackage{titling} % \theauthor
+\usepackage{xparse} % \DeclareDocumentCommand{}{}{}
+
+% chart
+\usepackage{tabularx} % 表格
+\usepackage{multirow} % \multirow{num_rows}{*=自動寬度}{content}
+% 類似功能有 \multicolumn{num_cols}{c/l/r}{content}
+
+% link
+\usepackage{xurl} % break long url
+\usepackage[unicode, colorlinks]{hyperref} % 超連結
+
+% draw
+\usepackage{tikz} % \usetikzlibrary{}
+\usepackage{cleveref} % \label{}, \ref{}, \cref{}
+
+% code
+\usepackage[newfloat, cache=false]{minted}
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage[noend]{algpseudocode}
+
+%%%%%%%%%% content %%%%%%%%%%
+
+\input{cmd.tex}
+
+\begin{document}
+
+% 頁首頁尾
+\pagestyle{fancy} %使用fancyhdr
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{Author: \theauthor}
+\cfoot{}
+\rfoot{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt} % 預設為 0
+
+% 標題
+\setlength{\headheight}{15pt}
+\setlength{\droptitle}{-1.5cm} 
+\parindent=0pt
+\title{Title}
+\author{Author}
+\date{\today}
+
+\maketitle
+\thispagestyle{fancy}
+
+\input{name.tex}
+
+\end{document}
