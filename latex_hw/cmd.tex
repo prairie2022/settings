@@ -6,7 +6,7 @@
 \newtheorem{definition}{Definition}
 
 %%%%% general math abbreviation %%%%%
-\NewDocumentCommand{\OP}{u{ }}{\operatorname{#1}} % ~ have bug with [inline]{enumitem}
+\NewDocumentCommand{\OP}{u{ }}{\operatorname{#1}}
 \let~\OP
 
 \def\N{\mathbb N}
@@ -23,7 +23,7 @@
 \DeclarePairedDelimiter{\ags}{\langle}{\rangle}
 \DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
 
-\makeatletter
+\makeatletter % https://github.com/fhvirus/FHW/blob/main/fhw.cls
 \newcommand{\@renewmid}{\renewcommand{\mid}{%
 	\mathclose{}%
 	\mathchoice{\;}{\;}{\,}{\,}%
@@ -59,11 +59,6 @@
 \def\d{\mathop{}\!\mathrm d} % https://tex.stackexchange.com/a/60546
 
 %%%%% additional %%%%%
-
-
-
-\begin{comment}
-	\RequirePackage{} % 重複載入宏包不報錯
-	\DeclareDocumentCommand{}{}{} % 是否已存在皆不報錯
-	還不會寫 command of command
-\end{comment}
+% \RequirePackage{} % 重複載入宏包不報錯
+% \DeclareDocumentCommand{}{}{} % 是否已存在皆不報錯
+% 還不會寫 command of command
