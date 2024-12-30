@@ -21,9 +21,9 @@
 
 % However, GenYo(G) fonts do not display my name right,
 % so I still use Noto for CJK characters.
-\setCJKmainfont[AutoFakeSlant=.2]{NotoSerifCJKtc-Regular}
-\setCJKsansfont[AutoFakeSlant=.2]{NotoSansCJKtc-Regular}
-\setCJKmonofont[Scale=0.9,AutoFakeSlant=.2]{NotoSansMonoCJKtc-Regular}
+\setCJKmainfont[Path=/home/prairie2022/texmf/fonts/noto-regular/, AutoFakeSlant=.2, BoldFont=NotoSerifCJKtc-Bold.otf]{NotoSerifCJKtc-Regular.otf}
+\setCJKsansfont[Path=/home/prairie2022/texmf/fonts/noto-regular/, BoldFont=NotoSansCJKtc-Bold.ttf, AutoFakeSlant=.2]{NotoSansCJKtc-Regular.otf}
+\setCJKmonofont[Path=/home/prairie2022/texmf/fonts/noto-regular/, Scale=0.9, AutoFakeSlant=.2]{NotoSansMonoCJKtc-Regular.otf}
 
 \RequirePackage[onehalfspacing]{setspace}
 
@@ -262,6 +262,7 @@
 \NewTheorem{observation}
 \NewTheorem{theorem}
 \NewTheorem{claim}
+\NewTheorem{remark} % add myself
 
 %--------------------------------------------------
 

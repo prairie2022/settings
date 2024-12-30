@@ -7,7 +7,7 @@
     },
     {
       "passKeys": "",
-      "pattern": "https://www\\.youtube\\.com/watch*"
+      "pattern": "https://www\\.youtube\\.com/*"
     },
     {
       "passKeys": "",
@@ -39,7 +39,7 @@
     },
     {
       "passKeys": "",
-      "pattern": "https://webosu\\.online/*"
+      "pattern": "https://quizlet\\.com/*"
     }
   ]
 }
