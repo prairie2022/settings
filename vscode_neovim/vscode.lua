@@ -55,3 +55,10 @@ vim.api.nvim_create_user_command('Sidebar', function()
     vim.fn.VSCodeNotify('workbench.action.toggleSidebarVisibility')
 end, {})
 vim.cmd("cnoreabbrev sd Sidebar")
+
+
+-- reload window
+vim.api.nvim_create_user_command('Reload', function()
+    vim.fn.VSCodeNotify('workbench.action.reloadWindow')
+end, {})
+vim.cmd("cnoreabbrev rw Reload")
