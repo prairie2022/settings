@@ -29,3 +29,12 @@ unset rc
 export wst="b13902105@ws4.csie.ntu.edu.tw"
 alias diary="sudo veracrypt ~/Desktop/diary.hc"
 alias sync_psweb="rclone sync ~/Desktop/remote/htdocs psweb: --progress --track-renames"
+alias desk="cd ~/Desktop"
+
+# cycle through completion
+# https://stackoverflow.com/a/51732355
+bind 'set show-all-if-ambiguous on'
+bind 'TAB: menu-complete'
+bind '"\e[Z": menu-complete-backward'
+
+# source .bashrc
