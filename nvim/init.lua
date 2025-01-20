@@ -12,3 +12,6 @@ vim.api.nvim_set_keymap('i', '{<CR>', '{<CR>}<Esc>O', { noremap = true, silent =
 
 vim.cmd('colorscheme slate')
 -- dark: default, desert, elflord, evening, industry, koehler, slate
+
+-- cursor blink
+vim.opt.guicursor = "a:blinkon1-blinkoff1"
