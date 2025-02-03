@@ -37,4 +37,9 @@ bind 'set show-all-if-ambiguous on'
 bind 'TAB: menu-complete'
 bind '"\e[Z": menu-complete-backward'
 
+# timestamp
+# https://www.onejar99.com/mac-linux-terminal-bash-prompt-html/
+export PS1='\[\033[0;33m\][\t]\[\033[00m\] \[\033[0;92m\]\w\[\033[00m\]\$ '
+export HISTTIMEFORMAT="%F %T "
+
 # source .bashrc
