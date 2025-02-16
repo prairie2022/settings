@@ -1,4 +1,5 @@
 vim.keymap.set('n', '<Esc>', ':noh<cr>', { noremap = true, silent = true })
+vim.keymap.set('n', '<Esc><Esc>', '<Esc>', { noremap = true, silent = true })
 
 -- add \displaystyle
 vim.keymap.set('i', '<c-d>', 'CUR-POS<Esc>?\\$\\\\displaystyle \\|\\$<cr>cgn$\\displaystyle<space><Esc>/CUR-POS<cr><Esc>cgn', { silent = true })
