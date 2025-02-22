@@ -15,17 +15,11 @@
 \XeTeXlinebreaklocale "zh"
 \XeTeXlinebreakskip = 0pt plus 1pt
 
-% \begin{comment} % 本地用
-    \setCJKmainfont[Path=/home/prairie2022/texmf/fonts/noto-regular/, AutoFakeSlant=.2, BoldFont=NotoSerifCJKtc-Bold.otf]{NotoSerifCJKtc-Regular.otf}
-    \setCJKsansfont[Path=/home/prairie2022/texmf/fonts/noto-regular/, BoldFont=NotoSansCJKtc-Bold.ttf, AutoFakeSlant=.2]{NotoSansCJKtc-Regular.otf}
-    \setCJKmonofont[Path=/home/prairie2022/texmf/fonts/noto-regular/, Scale=0.9, AutoFakeSlant=.2]{NotoSansMonoCJKtc-Regular.otf}
-% \end{comment}
-
-\begin{comment} % Overleaf 使用
+\InputIfFileExists{/home/prairie2022/texmf/fonts/font\_config.tex}{}{ % Overleaf
     \setCJKmainfont[AutoFakeSlant=.2]{Noto Serif CJK TC}
     \setCJKsansfont[AutoFakeSlant=.2]{Noto Sans CJK TC}
     \setCJKmonofont{Noto Sans Mono CJK TC}
-\end{comment}
+}
 
 %%%%%%%%%% math %%%%%%%%%%
 
