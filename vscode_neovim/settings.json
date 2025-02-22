@@ -239,6 +239,9 @@
         "jk": { // https://github.com/vscode-neovim/vscode-neovim/pull/1917
             "command": "vscode-neovim.escape"
         },
+        "jj": {
+            "command": "cursorEnd"
+        },
         ";a": {
             "command": "editor.action.insertSnippet",
             "args": [{
