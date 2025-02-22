@@ -221,7 +221,7 @@
     // display
     "workbench.startupEditor": "none",
     "files.exclude": {
-        "**/.*": true,
+        "**/.directory": true,
     },
     "security.workspace.trust.banner": "always",
     "editor.unicodeHighlight.ambiguousCharacters": false, // yellow highlighting on punctuations

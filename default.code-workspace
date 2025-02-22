@@ -1,13 +1,16 @@
 {
 	"folders": [
 		{
-			"path": "/home/prairie2022/Desktop/course"
+			"path": "/home/prairie2022/Desktop/course/113-2"
 		},
 		{
 			"path": "/media/veracrypt1"
 		},
 		{
-			"path": "/home/prairie2022"
+			"path": "/home/prairie2022/settings"
+		},
+		{
+			"path": "/home/prairie2022/Desktop/course/other"
 		},
 	],
 }
