@@ -1,5 +1,5 @@
 vim.keymap.set('i', 'jk', '<Esc>', { noremap = true, silent = true })
-vim.keymap.set('n', '<Esc>', ':noh<cr>', { noremap = true, silent = true })
+vim.keymap.set('n', '<Esc>', '<Esc>:noh<cr>', { noremap = true, silent = true })
 
 -- translated from .vimrc
 vim.opt.nu = true

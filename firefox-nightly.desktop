@@ -1,5 +1,6 @@
 #!/usr/bin/env xdg-open
 # https://gist.github.com/zzag/e2f0a5e022b726466c29afa3d497a3fc
+# ~/.local/share/applications/
 [Desktop Entry]
 Version=1.0
 Name=Firefox Nightly

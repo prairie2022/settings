@@ -15,6 +15,10 @@
     },
     {
       "passKeys": "",
+      "pattern": "https://keep\\.google\\.com/*"
+    },
+    {
+      "passKeys": "",
       "pattern": "https://www\\.overleaf\\.com/project/*"
     },
     {
@@ -28,10 +32,6 @@
     {
       "passKeys": "",
       "pattern": "https://hackmd\\.io/(?!\\?)(?!@)(?!bookmark$)(?!recent$)*$"
-    },
-    {
-      "passKeys": "",
-      "pattern": "https://keep\\.google\\.com/*"
     },
     {
       "passKeys": "",

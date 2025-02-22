@@ -30,6 +30,8 @@ export wst="b13902105@ws4.csie.ntu.edu.tw"
 alias diary="sudo veracrypt ~/Desktop/diary.hc"
 alias sync_psweb="rclone sync ~/Desktop/remote/htdocs psweb: --progress --track-renames"
 alias desk="cd ~/Desktop"
+alias cp="cp -i" # preventing overwrite
+alias mv="mv -i"
 
 # cycle through completion
 # https://stackoverflow.com/a/51732355

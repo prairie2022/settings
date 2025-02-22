@@ -1,4 +1,4 @@
-vim.keymap.set('n', '<Esc>', ':noh<cr>', { noremap = true, silent = true })
+vim.keymap.set('n', '<Esc>', '<Esc>:noh<cr>', { noremap = true, silent = true })
 
 -- add \displaystyle
 vim.keymap.set('i', '<c-d>', 'CUR-POS<Esc>?\\$\\\\displaystyle \\|\\$<cr>cgn$\\displaystyle<space><Esc>/CUR-POS<cr><Esc>cgn', { silent = true })
@@ -18,12 +18,6 @@ vim.api.nvim_create_user_command('DisplayMD', function()
 end, {})
 vim.cmd("cnoreabbrev dm DisplayMD")
 
--- synctex
-vim.api.nvim_create_user_command('JumpToPDF', function()
-    vim.fn.VSCodeNotify('latex-workshop.synctex')
-end, {})
-vim.cmd("cnoreabbrev fd JumpToPDF")
-
 -- scroll sync in MD
 vim.api.nvim_create_user_command('ScrollSync', function()
     vim.fn.VSCodeNotify('markdown-preview-enhanced.toggleScrollSync')
@@ -42,6 +36,11 @@ vim.api.nvim_create_user_command('PreviewInNewTab', function()
 end, {})
 vim.cmd("cnoreabbrev PV PreviewInNewTab")
 
+-- synctex
+vim.api.nvim_create_user_command('JumpToPDF', function()
+    vim.fn.VSCodeNotify('latex-workshop.synctex')
+end, {})
+vim.cmd("cnoreabbrev fd JumpToPDF")
 
 -- LaTeX preview
 vim.api.nvim_create_user_command('ViewPDF', function()

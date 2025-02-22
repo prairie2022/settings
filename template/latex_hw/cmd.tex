@@ -54,7 +54,7 @@
 }{\par}
 
 %%%%% other %%%%%
-\NewDocumentCommand{\rng}{sO{1}mmm}{#4_{#2}\IfBooleanT{#1}{'} #5 \cdots #5 #4_{#3}\IfBooleanT{#1}{'}}
+\NewDocumentCommand{\rng}{O{1}mmO{}m}{#3_{#1}#4 #5 \cdots #5 #3_{#2}#4}
 
 \def\d{\mathop{}\!\mathrm d} % https://tex.stackexchange.com/a/60546
 

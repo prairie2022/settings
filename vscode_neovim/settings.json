@@ -65,7 +65,6 @@
     "editor.showFoldingControls": "always",
     "markdown.preview.typographer": true,
     "terminal.integrated.enableMultiLinePasteWarning": "never",
-    "workbench.iconTheme": "material-icon-theme",
     "editor.wordWrap": "on",
 
     // https://hackmd.io/@DextinChen/VSCode-LaTeX-setting
@@ -186,27 +185,15 @@
     
     // 每次編譯前，刪除之前的output檔
     "latex-workshop.latex.clean.fileTypes": [
-        "*.aux",
-        "*.bbl",
+        "*.acn", "*.acr", "*.alg",
         "*.blg",
-        "*.idx",
-        "*.ind",
-        "*.lof",
-        "*.lot",
-        "*.out",
-        "*.toc",
-        "*.acn",
-        "*.acr",
-        "*.alg",
+        "*.fdb_latexmk", "*.fls",
         "*.glg",
-        "*.glo",
-        "*.gls",
-        "*.ist",
-        "*.fls",
+        "*.idx", "*.ind", "*.ist",
         "*.log",
-        "*.fdb_latexmk"
+        "*.out",
     ],
-    "latex-workshop.latex.autoClean.run": "never", // 二次編譯使用
+    "latex-workshop.latex.autoClean.run": "onSucceeded", // 二次編譯使用
     "latex-workshop.synctex.afterBuild.enabled": true,
     "latex-workshop.bind.enter.key": false, // \item
 
@@ -235,27 +222,22 @@
     "workbench.startupEditor": "none",
     "files.exclude": {
         "**/.*": true,
-        "**/*.html": true,
     },
     "security.workspace.trust.banner": "always",
-    "window.newWindowProfile": "Default",
-    "editor.minimap.enabled": false,
     "editor.unicodeHighlight.ambiguousCharacters": false, // yellow highlighting on punctuations
     "material-icon-theme.folders.associations": {
         "homework": "job"
     },
+
     // neovim
     "extensions.experimental.affinity": {
         "asvetliakov.vscode-neovim": 1
     },
-    "vscode-neovim.neovimInitVimPaths.linux": "/home/prairie2022/Desktop/remote/settings/vscode_neovim/vscode.lua",
+    "vscode-neovim.neovimInitVimPaths.linux": "/home/prairie2022/settings/vscode_neovim/vscode.lua",
 
     "vscode-neovim.compositeKeys": {
         "jk": { // https://github.com/vscode-neovim/vscode-neovim/pull/1917
             "command": "vscode-neovim.escape"
-        },
-        "JJ": {
-            "command": "cursorEnd",
         },
         ";a": {
             "command": "editor.action.insertSnippet",
@@ -295,4 +277,7 @@
 
     // temporary
     "markdown-preview-enhanced.scrollSync": true,
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.minimap.enabled": false,
+    "window.titleBarStyle": "native",
 }
