@@ -14,7 +14,7 @@
 	// }
 	"\\cdots": {
 		"prefix": "...",
-		"body": "\\cdots"
+		"body": "\\cdots "
 	},
 	"abc": {
 		"prefix": "abc",
@@ -23,5 +23,17 @@
     		"    \\item $1",
 			"\\end{enumerate}"
 		]
+	},
+	"proof": {
+		"prefix": "BPF",
+		"body": [
+			"\\begin{proof}",
+			"    $1",
+			"\\end{proof}"
+		]
+	},
+	"\\maps": {
+		"prefix": "maps",
+		"body": "\\maps{$1}{$2}{$3}{$4}"
 	},
 }

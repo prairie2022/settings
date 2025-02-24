@@ -240,7 +240,7 @@
             "command": "vscode-neovim.escape"
         },
         "jj": {
-            "command": "cursorEnd"
+            "command": "cursorLineEnd"
         },
         ";a": {
             "command": "editor.action.insertSnippet",
