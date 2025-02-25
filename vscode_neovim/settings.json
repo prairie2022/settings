@@ -225,9 +225,12 @@
     },
     "security.workspace.trust.banner": "always",
     "editor.unicodeHighlight.ambiguousCharacters": false, // yellow highlighting on punctuations
+    "workbench.iconTheme": "material-icon-theme",
     "material-icon-theme.folders.associations": {
         "homework": "job"
     },
+    "editor.minimap.enabled": false,
+    "git.confirmSync": false,
 
     // neovim
     "extensions.experimental.affinity": {
@@ -280,7 +283,4 @@
 
     // temporary
     "markdown-preview-enhanced.scrollSync": true,
-    "workbench.iconTheme": "material-icon-theme",
-    "editor.minimap.enabled": false,
-    "window.titleBarStyle": "native",
 }
