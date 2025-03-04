@@ -61,14 +61,8 @@
         "pkl": "cd $dir && pkl eval -f yaml $fileName -o $fileNameWithoutExt.yaml",
         "gleam": "gleam run -m $fileNameWithoutExt"
     },
-    "notebook.showFoldingControls": "always",
-    "editor.showFoldingControls": "always",
-    "markdown.preview.typographer": true,
-    "terminal.integrated.enableMultiLinePasteWarning": "never",
-    "editor.wordWrap": "on",
 
-    // https://hackmd.io/@DextinChen/VSCode-LaTeX-setting
-    // 編譯LaTeX的工具設定
+    // latex
     "latex-workshop.latex.tools": [
         { // for FHW
             "name": "fhw",
@@ -86,52 +80,10 @@
             "name": "xelatex",
             "command": "xelatex",
             "args": [
-                "-synctex=1",
-                "-file-line-error",
+                "-synctex=1", // sync source & pdf
+                "-file-line-error", // show error line
+                "-shell-escape",
                 "-halt-on-error",
-                "%DOC%"
-            ]
-        },
-        {
-            "name": "xelatex-with-shell-escape",
-            "command": "xelatex",
-            "args": [
-                "-synctex=1",
-                "--shell-escape",
-                "-file-line-error",
-                "-halt-on-error",
-                "%DOC%"
-            ]
-        },
-        {
-            "name": "pdflatex",
-            "command": "pdflatex",
-            "args": [
-                "-synctex=1",
-                "-file-line-error",
-                "-halt-on-error",
-                "%DOC%"
-            ]
-        },
-        {
-            "name": "pdflatex-with-shell-escape",
-            "command": "pdflatex",
-            "args": [
-                "-synctex=1",
-                "--shell-escape",
-                "-file-line-error",
-                "-halt-on-error",
-                "%DOC%"
-            ]
-        },
-        {
-            "name": "latexmk",
-            "command": "latexmk",
-            "args": [
-                "-synctex=1",
-                "-file-line-error",
-                "-halt-on-error",
-                "-pdf",
                 "%DOC%"
             ]
         },
@@ -151,7 +103,6 @@
         // }
     ],
     
-    // 選擇LaTeX編譯工具的指令，以及工具的順序
     "latex-workshop.latex.recipes": [
         {
             "name": "FHW",
@@ -159,31 +110,13 @@
                 "fhw"
             ]
         },
-        //　目前只使用xelatex和bibtex 
         {
             "name": "xelatex",
             "tools": [
                 "xelatex"
             ]
         }, 
-        {
-            "name": "xelatex with shell escape",
-            "tools": [
-                "xelatex-with-shell-escape"
-            ]
-        },
-        {
-            "name": "bibtex",
-            "tools": [
-                "bibtex",
-            ]
-        },
     ],
-    
-    // 選擇pdf瀏覽器，可選browser/tab/external
-    "latex-workshop.view.pdf.viewer": "tab",
-    
-    // 每次編譯前，刪除之前的output檔
     "latex-workshop.latex.clean.fileTypes": [
         "*.acn", "*.acr", "*.alg",
         "*.blg",
@@ -193,7 +126,8 @@
         "*.log",
         "*.out",
     ],
-    "latex-workshop.latex.autoClean.run": "onSucceeded", // 二次編譯使用
+    "latex-workshop.latex.autoBuild.run": "onSave",
+    "latex-workshop.latex.autoClean.run": "onSucceeded",
     "latex-workshop.synctex.afterBuild.enabled": true,
     "latex-workshop.bind.enter.key": false, // \item
 
@@ -217,8 +151,13 @@
     "MarkdownPaste.nameBase": "${datetime|MMDD-HHmmss}",
     "MarkdownPaste.path": "${fileDirname}/image",
     "MarkdownPaste.silence": true,
+    "markdown.preview.typographer": true,
     
     // display
+    "notebook.showFoldingControls": "always",
+    "editor.showFoldingControls": "always",
+    "terminal.integrated.enableMultiLinePasteWarning": "never",
+    "editor.wordWrap": "on",
     "workbench.startupEditor": "none",
     "files.exclude": {
         "**/.directory": true,
@@ -232,6 +171,8 @@
     "editor.minimap.enabled": false,
     "git.confirmSync": false,
     "chat.commandCenter.enabled": false,
+    "latex-workshop.message.warning.show": false,
+    "latex-workshop.message.error.show": false,
 
     // neovim
     "extensions.experimental.affinity": {

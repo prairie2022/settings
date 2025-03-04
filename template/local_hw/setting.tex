@@ -1,0 +1,140 @@
+%%%%%%%%%% default packages %%%%%%%%%%
+
+%%%%% basic functions %%%%%
+
+\usepackage[margin=2cm]{geometry} % 邊界、紙張、頁眉、頁腳、頁框，設定時可用 \geometry{<op1>, <op2>, ...}
+\usepackage[onehalfspacing]{setspace}
+\usepackage{comment}
+
+%%%%% text fonts %%%%%
+
+\usepackage{lmodern}
+\usepackage{fontspec}
+\usepackage[fallback]{xeCJK}
+
+\XeTeXlinebreaklocale "zh"
+\XeTeXlinebreakskip = 0pt plus 1pt
+
+\InputIfFileExists{/home/prairie2022/texmf/fonts/font\_config.tex}{}{ % Overleaf
+    \setCJKmainfont[AutoFakeSlant=.2]{Noto Serif CJK TC}
+    \setCJKsansfont[AutoFakeSlant=.2]{Noto Sans CJK TC}
+    \setCJKmonofont{Noto Sans Mono CJK TC}
+}
+
+%%%%% math %%%%%
+
+\usepackage{bm} % \bm{粗體字}
+\usepackage{mathrsfs} % \mathscr{花體字}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{yhmath} % 優化排版
+\usepackage{mathtools} % 額外排版功能
+% \DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
+\usepackage{esint} % 積分符號
+\usepackage{esdiff} % \diff(p)(*)
+\usepackage{cancel} % \cancel{刪除線} \bcancel{反刪除線} \xcancel{交叉刪除線}
+\usepackage{centernot} % \centernot{}
+% \usepackage{siunitx} % \si{單位} \SI{數值}{單位}
+
+%%%%% other items %%%%%
+
+\usepackage{xcolor} % 顏色
+\usepackage[inline]{enumitem} % [label= , itemjoin= ]
+\usepackage{fancyhdr} % 頁首頁尾
+\usepackage{graphicx} % 插入圖片 \includegraphics[]{}
+\usepackage[normalem]{ulem} % 下劃線
+\usepackage{titling} % \theauthor
+\usepackage{xparse} % \DeclareDocumentCommand{}{}{}
+
+% chart
+\usepackage{tabularx} % 表格
+\usepackage{multirow} % \multirow{num_rows}{*=自動寬度}{content}
+% 類似功能有 \multicolumn{num_cols}{c/l/r}{content}
+
+% link
+\usepackage{xurl} % break long url
+\usepackage[unicode, colorlinks]{hyperref} % 超連結
+
+% draw
+\usepackage{tikz} % \usetikzlibrary{}
+\usepackage{cleveref} % \label{}, \ref{}, \cref{}
+
+% code
+\usepackage[newfloat, cache=false]{minted}
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage[noend]{algpseudocode}
+
+%%%%%%%%%% custom commands %%%%%%%%%%
+
+%%%%% theorem %%%%%
+
+\theoremstyle{definition} % 預設為 plain，內文為斜體
+\newtheorem{definition}{Definition}
+\newtheorem{claim}{Claim}
+\newtheorem{lemma}{Lemma}
+\newtheorem*{remark}{Remark}
+\newtheorem*{recall}{Recall}
+
+%%%%% general math abbreviation %%%%%
+
+\NewDocumentCommand{\OP}{u{ }}{\operatorname{#1}}
+\let~\OP
+
+\def\N{\mathbb N}
+\def\Z{\mathbb Z}
+\def\Q{\mathbb Q}
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+\def\eps{\varepsilon}
+
+%%%%%% paired delimiter，加 * 會自動調整大小 %%%%%
+
+\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+\DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}
+\DeclarePairedDelimiter{\ags}{\langle}{\rangle}
+\DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
+
+\makeatletter % https://github.com/fhvirus/FHW/blob/main/fhw.cls
+\newcommand{\@renewmid}{\renewcommand{\mid}{%
+	\mathclose{}%
+	\mathchoice{\;}{\;}{\,}{\,}%
+	\delimsize\vert%
+	\mathchoice{\;}{\;}{\,}{\,}%
+	\mathopen{}%
+}}
+
+\DeclarePairedDelimiterX{\set}[1]{\lbrace}{\rbrace}{\@renewmid #1}
+\makeatother
+
+%%%%% arrow %%%%%
+
+\NewDocumentCommand{\To}{O{\;}}{\xrightarrow{\;\; #1 \;\;}}
+\NewDocumentCommand{\maps}{mO{\To}mO{\;}mm}{
+    \begin{aligned}
+        #1 #2[#4] & \; #3\\
+        #5 \xmapsto{\;\;\phantom{#4}\;\;} & \; #6
+    \end{aligned}
+}
+\ProvideDocumentCommand{\xtwoheadrightarrow}{O{}m}{\mathrel{\xrightarrow[#1]{#2}\hspace{-1.2em}\xrightarrow{}\hspace{0.2em}}}
+
+%%%%% environment %%%%%
+
+\NewDocumentCommand{\circled}{m}{\tikz[baseline=(char.base)]{\node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+% [label = \protect\circled{\arabic*}]
+
+\NewDocumentEnvironment{stm}{m}{
+	\par\noindent\underline{#1}. \ignorespaces
+}{\par}
+
+%%%%% other %%%%%
+
+\NewDocumentCommand{\rng}{O{1}mmO{}m}{#3_{#1}#4 #5 \cdots #5 #3_{#2}#4}
+
+\def\d{\mathop{}\!\mathrm d} % https://tex.stackexchange.com/a/60546
+
+%%%%% additional %%%%%
+
+% \RequirePackage{} % 重複載入宏包不報錯
+% \DeclareDocumentCommand{}{}{} % 是否已存在皆不報錯
+% 還不會寫 command of command
