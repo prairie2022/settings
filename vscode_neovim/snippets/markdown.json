@@ -30,6 +30,21 @@
 		"prefix": "img",
 		"body": "![](image$1)"
 	},
+	"image_width": {
+		"prefix": "width",
+		"body": [
+			"{width=500}",
+			""
+		]
+	},
+	"aligned" : {
+		"prefix" : "BSAL",
+		"body": [
+			"$$\\begin{aligned}",
+			"    $1",
+			"\\end{aligned}$$"
+		]
+	},
 	"proof-normal": {
 		"prefix": "proof",
 		"body": [

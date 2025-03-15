@@ -1,3 +1,4 @@
+-- nohlsearch
 vim.keymap.set('n', '<Esc>', '<Esc>:noh<cr>', { noremap = true, silent = true })
 
 -- add \displaystyle
@@ -10,13 +11,18 @@ vim.api.nvim_create_user_command('DisplayTeX', function()
 end, {})
 vim.cmd("cnoreabbrev dt DisplayTeX")
 
-
 -- inline -> display in .md
 vim.api.nvim_create_user_command('DisplayMD', function()
     vim.api.nvim_input('?\\$\\\\displaystyle \\|\\$<cr>cgn')
-    vim.api.nvim_input('$$<Esc>/\\$<cr>a$<Esc><Esc>')
+    vim.api.nvim_input('$$<esc>/\\$<cr>a$<esc><esc>')
 end, {})
 vim.cmd("cnoreabbrev dm DisplayMD")
+
+-- bold text in .md
+vim.keymap.set('v', ';b', 'di****<Esc>hhp', { noremap = true, silent = true })
+
+-- add brace
+vim.keymap.set('v', ';c', 'diCUR-POS{}<Esc>hp?CUR-POS<CR>cgn', { noremap = true, silent = true })
 
 -- scroll sync in MD
 vim.api.nvim_create_user_command('ScrollSync', function()
