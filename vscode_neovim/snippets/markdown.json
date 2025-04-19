@@ -15,16 +15,30 @@
 	"image": {
 		"body": "![](image$1)"
 	},
-	"image-width": {
+	"width": {
 		"body": "{width=${1:5}00}"
 	},
-	"aligned" : {
+	"aligned": {
 		"body": [
 			"$$\\begin{aligned}",
 			"    $1",
 			"\\end{aligned}$$"
 		]
 	},
+	"forall": {
+		"body": "\\forall\\, "
+	},
+	"exists": {
+		"body": "\\exists\\, "
+	},
+	"text": {
+		"body": "\\text{$1}"
+	},
+	"inverse": {
+		"body": "^{-1}"
+	},
+	
+	// theorem theme
 	"spoiler": {
 		"body": [
 			"<details><summary> ${1:top} </summary>",

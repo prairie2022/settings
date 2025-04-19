@@ -4,6 +4,7 @@
     "code-runner.runInTerminal": true,
     "code-runner.executorMap": {
         "markdown": "cd $dir && pandoc \"$fileName\" -o \"$fileNameWithoutExt.pdf\" --pdf-engine=xelatex -f markdown+hard_line_breaks",
+        "typst": "cd $dir && typst compile \"$fileName\"",
         "javascript": "node",
         "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
         "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
@@ -188,32 +189,8 @@
         "jj": {
             "command": "cursorLineEnd"
         },
-        ";a": {
+        "js": {
             "command": "editor.action.insertSnippet",
-            "args": [{
-                "snippet": "\\forall\\, "
-            }]
-        },
-        ";e": {
-            "command": "editor.action.insertSnippet",
-            "args": [{
-                "snippet": "\\exists\\, "
-            }]
-        },
-        ";s": {
-            "command": "editor.action.insertSnippet",
-        },
-        ";t": {
-            "command": "editor.action.insertSnippet",
-            "args": [{
-                "snippet": "\\text{$1}"
-            }]
-        },
-        ";v": {
-            "command": "editor.action.insertSnippet",
-            "args": [{
-                "snippet": "^{-1}"
-            }]
         },
     },
 
@@ -222,9 +199,10 @@
         "/", "]", "backspace", "delete",
         // "right", "left", "up", "down"
     ],
-    "vscode-neovim.ctrlKeysForInsertMode": ["a", "d", "h", "j", "m", "o", "r", "t", "u", "w"],
+    "vscode-neovim.ctrlKeysForInsertMode": ["d", "r", "t", "u"],
 
     // temporary
     "markdown-preview-enhanced.scrollSync": true,
     "git.enableSmartCommit": true,
+    "workbench.editor.empty.hint": "hidden",
 }

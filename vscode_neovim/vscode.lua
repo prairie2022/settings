@@ -34,13 +34,7 @@ vim.cmd("cnoreabbrev ss ScrollSync")
 vim.api.nvim_create_user_command('PreviewMD', function()
     vim.fn.VSCodeNotify('markdown-preview-enhanced.openPreviewToTheSide')
 end, {})
-vim.cmd("cnoreabbrev pv PreviewMD")
-
--- MD preview (new tab)
-vim.api.nvim_create_user_command('PreviewInNewTab', function()
-    vim.fn.VSCodeNotify('markdown-preview-enhanced.openPreview')
-end, {})
-vim.cmd("cnoreabbrev PV PreviewInNewTab")
+vim.cmd("cnoreabbrev pmd PreviewMD")
 
 -- synctex
 vim.api.nvim_create_user_command('JumpToPDF', function()
@@ -52,7 +46,7 @@ vim.cmd("cnoreabbrev fd JumpToPDF")
 vim.api.nvim_create_user_command('ViewPDF', function()
     vim.fn.VSCodeNotify('latex-workshop.view')
 end, {})
-vim.cmd("cnoreabbrev vw ViewPDF")
+vim.cmd("cnoreabbrev plt ViewPDF")
 
 
 -- primary side bar
@@ -78,7 +72,7 @@ vim.cmd("cnoreabbrev or OpenRecent")
 vim.api.nvim_create_user_command('TypstPreview', function()
     vim.fn.VSCodeNotify('typst-preview.preview')
 end, {})
-vim.cmd("cnoreabbrev tpv TypstPreview")
+vim.cmd("cnoreabbrev pty TypstPreview")
 
 -- inline -> display in .typ
 vim.api.nvim_create_user_command('DisplayTypst', function()
