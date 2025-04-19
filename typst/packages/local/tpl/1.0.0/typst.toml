@@ -1,0 +1,8 @@
+[package]
+name = "tpl"
+version = "1.0.0"
+entrypoint = "tpl.typ"
+authors = ["prairie2022"]
+license = "MIT"
+description = "Typst template for homeworks."
+
