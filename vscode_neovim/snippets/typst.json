@@ -1,0 +1,90 @@
+{
+	// Place your snippets for typst here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"qty": {
+		"body": "#QTY[${1:number}][${2:unit}]"
+	},
+	"smallcaps": {
+		"body": "#smallcaps[$1]${2:;($3)}"
+	},
+	"template": {
+		"body": [
+			"///// fonts /////",
+			"/*",
+			"#set text(",
+			"  font: \"Noto Sans Mono CJK TC\" // 字體應該中英文分開",
+			")",
+			"#show emph: set text(font: \"\") // 目前還沒找到支援斜體的中文字型",
+			"#show raw: set text(font: \"Noto Sans Mono CJK TC\")",
+			"*/",
+			"#show regex(\"[\\p{scx:Han}]\"): set text(font: \"Noto Serif CJK SC\") // https://github.com/typst/typst/issues/794",
+			"",
+			"///// fancy header & footer /////",
+			"",
+			"#import \"@preview/chic-hdr:0.5.0\": *",
+			"#show: chic.with( // https://typst.app/universe/package/chic-hdr/",
+			"  chic-footer(",
+			"    left-side: context [ B13902105 卓育安 ],",
+			"    right-side: context [ #counter(page).display(\"1/1\", both: true) ] // https://typst.app/docs/guides/page-setup-guide/#custom-footer-with-page-numbers",
+			"  ),",
+			"  chic-header(",
+			"    left-side: context [ ${1:homework} ],",
+			"    right-side: context [ ${2:Lecture} ]",
+			"  ),",
+			"  chic-separator(1pt),",
+			"  chic-offset(7pt),",
+			"  chic-height(1.5cm)",
+			")",
+			"",
+			"///// table /////",
+			"// #import \"@preview/pillar:0.3.1\"",
+			"",
+			"///// theorem /////",
+			"// https://raw.githubusercontent.com/typst/packages/main/packages/preview/ctheorems/1.1.3/assets/manual.pdf",
+			"",
+			"#import \"@preview/ctheorems:1.1.3\": *",
+			"#show: thmrules",
+			"",
+			"#let definition = thmbox( \"definition\", \"Definition\" ).with(base: none, breakable: true)",
+			"#let remark = thmbox( \"remark\", \"Remark\" ).with(base: none, breakable: true)",
+			"#let problem = thmbox( \"problem\", \"Problem\" ).with(base: none, breakable: true)",
+			"#let claim = thmbox( \"claim\", \"Claim\" ).with(base: none, breakable: true)",
+			"#let lemma = thmbox( \"lemma\", \"Lemma\" ).with(base: none, breakable: true)",
+			"#let proof = thmproof(\"proof\", \"Proof\")",
+			"",
+			"///// math /////",
+			"#show math.equation: set block(breakable: true) // https://github.com/typst/typst/pull/4226#issue-2311216543",
+			"#show math.equation.where(block: false): math.display // https://forum.typst.app/t/how-can-i-use-display-mode-for-in-line-math/1179/2",
+			"#let ags(x) = \\$lr(angle.l #x angle.r)$",
+			"#let eps = \\$epsilon$",
+			"#let itg = \\$integral$",
+			"#let quad = h(10pt)",
+			"#let big(x) = \\$lr( #x , size: #150%)$",
+			"",
+			"#import \"@preview/quick-maths:0.2.1\": shorthands",
+			"#show: shorthands.with(",
+			"  ($*$, \\$dot$),",
+			"  ($...$, \\$dots.c$),",
+			"  ($+-$, \\$plus.minus$),",
+			"  ($-+$, \\$minus.plus$),",
+			")",
+			"",
+			"///// custom /////",
+			"#let pr(x) = [*#x* #quad]",
+			"",
+			"///// content /////",
+			""
+		],
+	}
+}

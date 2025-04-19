@@ -171,9 +171,9 @@
     },
     "editor.minimap.enabled": false,
     "git.confirmSync": false,
-    "chat.commandCenter.enabled": false,
     "latex-workshop.message.warning.show": false,
     "latex-workshop.message.error.show": false,
+    "window.newWindowDimensions": "maximized",
 
     // neovim
     "extensions.experimental.affinity": {
@@ -226,4 +226,5 @@
 
     // temporary
     "markdown-preview-enhanced.scrollSync": true,
+    "git.enableSmartCommit": true,
 }

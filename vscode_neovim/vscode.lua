@@ -67,3 +67,21 @@ vim.api.nvim_create_user_command('Reload', function()
     vim.fn.VSCodeNotify('workbench.action.reloadWindow')
 end, {})
 vim.cmd("cnoreabbrev rw Reload")
+
+-- open recent
+vim.api.nvim_create_user_command('OpenRecent', function()
+    vim.fn.VSCodeNotify('workbench.action.openRecent')
+end, {})
+vim.cmd("cnoreabbrev or OpenRecent")
+
+-- tinymist preview
+vim.api.nvim_create_user_command('TypstPreview', function()
+    vim.fn.VSCodeNotify('typst-preview.preview')
+end, {})
+vim.cmd("cnoreabbrev tpv TypstPreview")
+
+-- inline -> display in .typ
+vim.api.nvim_create_user_command('DisplayTypst', function()
+    vim.api.nvim_input('?\\$<cr>s<cr>$<space><Esc>/\\$<cr>s<space>$<cr><Esc>:noh<cr>')
+end, {})
+vim.cmd("cnoreabbrev dy DisplayTypst")

@@ -12,8 +12,20 @@
 	// 	],
 	// 	"description": "Log output to console"
 	// }
-	"details": {
-		"prefix": "spoiler",
+	"image": {
+		"body": "![](image$1)"
+	},
+	"image-width": {
+		"body": "{width=${1:5}00}"
+	},
+	"aligned" : {
+		"body": [
+			"$$\\begin{aligned}",
+			"    $1",
+			"\\end{aligned}$$"
+		]
+	},
+	"spoiler": {
 		"body": [
 			"<details><summary> ${1:top} </summary>",
 			"",
@@ -22,31 +34,7 @@
 			"</details>"
 		]
 	},
-	"href": {
-		"prefix": "link",
-		"body": "<a href=\"${2:url}\"> ${1:text} </a>"
-	},
-	"image": {
-		"prefix": "img",
-		"body": "![](image$1)"
-	},
-	"image_width": {
-		"prefix": "width",
-		"body": [
-			"{width=500}",
-			""
-		]
-	},
-	"aligned" : {
-		"prefix" : "BSAL",
-		"body": [
-			"$$\\begin{aligned}",
-			"    $1",
-			"\\end{aligned}$$"
-		]
-	},
 	"proof-normal": {
-		"prefix": "proof",
 		"body": [
 			"<div class=${1|\"proof\",\"proof\" data-name=\"subproof\"|}>",
 			"${2:content}",
@@ -55,7 +43,6 @@
 		]
 	},
 	"proof-wrap": {
-		"prefix": "proof-wrap",
 		"body": [
 			"<details class=\"proof\"><${1|summary,summary data-name=\"subproof\"|}>",
 			"${2:info}",
@@ -67,7 +54,6 @@
 		]
 	},
 	"thm-normal": {
-		"prefix": "thm",
 		"body": [
 			"<div class=\"thm\"${1: data-name=\"${2|Lemma,Corollary,Property|}\"}>",
 			"${3:content}",
@@ -76,7 +62,6 @@
 		]
 	},
 	"thm-wrap": {
-		"prefix": "thm-wrap",
 		"body": [
 			"<details class=\"thm\"><summary${1: data-name=\"${2|Lemma,Corollary,Property|}\"}>",
 			"${3:info}",
@@ -88,7 +73,6 @@
 		]
 	},
 	"rem-normal": {
-		"prefix": "rem",
 		"body": [
 			"<div class=\"rem\"${1: data-name=\"${2|Definition,Example|}\"}>",
 			"${3:content}",
@@ -97,7 +81,6 @@
 		]
 	},
 	"rem-wrap": {
-		"prefix": "rem-wrap",
 		"body": [
 			"<details class=\"rem\"><summary${1: data-name=\"${2|Definition,Example|}\"}>",
 			"${3:info}",

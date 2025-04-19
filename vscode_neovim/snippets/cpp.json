@@ -14,7 +14,6 @@
 	// }
 
 	"Codeforces": {
-		"prefix": "CF",
 		"body": [
 			"#include <bits/stdc++.h>",
 			"using namespace std;",
@@ -32,10 +31,8 @@
 			"    return 0;",
 			"}"
 		],
-		"description": "default code for Codeforces"
 	},
 	"default_code": {
-		"prefix": "DF",
 		"body": [
 			"#include <bits/stdc++.h>",
 			"using namespace std;",
@@ -48,6 +45,5 @@
 			"    return 0;",
 			"}"
 		],
-		"description": "default code for competitive programming"
 	}
 }
