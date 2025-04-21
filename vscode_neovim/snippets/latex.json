@@ -32,8 +32,20 @@
 			"\\end{proof}"
 		]
 	},
-	"\\maps": {
+	"maps": {
 		"prefix": "maps",
 		"body": "\\maps{$1}{$2}{$3}{$4}"
+	},
+	"forall": {
+		"body": "\\forall\\, "
+	},
+	"exists": {
+		"body": "\\exists\\, "
+	},
+	"text": {
+		"body": "\\text{$1}"
+	},
+	"inverse": {
+		"body": "^{-1}"
 	},
 }

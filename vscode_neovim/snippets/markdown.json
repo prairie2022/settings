@@ -25,18 +25,6 @@
 			"\\end{aligned}$$"
 		]
 	},
-	"forall": {
-		"body": "\\forall\\, "
-	},
-	"exists": {
-		"body": "\\exists\\, "
-	},
-	"text": {
-		"body": "\\text{$1}"
-	},
-	"inverse": {
-		"body": "^{-1}"
-	},
 	
 	// theorem theme
 	"spoiler": {

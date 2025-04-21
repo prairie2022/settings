@@ -40,8 +40,9 @@
 #let definition = thmbox( "definition", "Definition" ).with(base: none, breakable: true)
 #let remark = thmbox( "remark", "Remark" ).with(base: none, breakable: true)
 #let problem = thmbox( "problem", "Problem" ).with(base: none, breakable: true)
-#let claim = thmbox( "claim", "Claim" ).with(base: none, breakable: true)
 #let lemma = thmbox( "lemma", "Lemma" ).with(base: none, breakable: true)
+#let claim = thmbox( "claim", "Claim" ).with(base: none, breakable: true)
+#let case = thmbox( "case", "Case" ).with(base: none, breakable: true)
 #let proof = thmproof("proof", "Proof")
 #let sol = thmproof("sol", "Solution")
 

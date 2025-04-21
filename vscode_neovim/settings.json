@@ -149,11 +149,16 @@
     "markdown.extension.list.indentationSize": "inherit",
     "markdown-preview-enhanced.latexEngine": "xelatex",
     "editor.wordBasedSuggestions": "off",
-    "MarkdownPaste.autoSelectClipboardType": "always",
-    "MarkdownPaste.nameBase": "${datetime|MMDD-HHmmss}",
-    "MarkdownPaste.path": "${fileDirname}/image",
-    "MarkdownPaste.silence": true,
     "markdown.preview.typographer": true,
+    "MarkdownPaste.autoSelectClipboardType": "always",
+    "MarkdownPaste.silence": true,
+    "MarkdownPaste.imageRules": [
+        {
+            "match": ".*",
+            "targetPath": "${fileDirname}/image/${datetime|MMDD-HHmmss}",
+            "linkPattern": "![](image/${datetime|MMDD-HHmmss}.png){width=${selectedText|5}00}"
+        }
+    ],
     
     // display
     "notebook.showFoldingControls": "always",
