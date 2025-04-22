@@ -210,4 +210,11 @@
     "markdown-preview-enhanced.scrollSync": true,
     "git.enableSmartCommit": true,
     "workbench.editor.empty.hint": "hidden",
+    "github.copilot.enable": {
+        "*": false,
+    },
+    "workbench.editorAssociations": {
+        "*.pdf": "latex-workshop-pdf-hook"
+    },
+    "window.newWindowProfile": "Default",
 }
