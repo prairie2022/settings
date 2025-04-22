@@ -40,6 +40,7 @@
 #let itg = $integral$
 #let quad = h(10pt)
 #let big(x) = $lr( #x , size: #150%)$
+#let pmod(x) = $#h(5pt) (mod #x)$
 
 
 ///// custom /////
