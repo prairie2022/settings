@@ -194,9 +194,6 @@
         "jj": {
             "command": "cursorLineEnd"
         },
-        "js": {
-            "command": "editor.action.insertSnippet",
-        },
     },
 
     "vscode-neovim.ctrlKeysForNormalMode": [
@@ -210,6 +207,7 @@
     "markdown-preview-enhanced.scrollSync": true,
     "git.enableSmartCommit": true,
     "workbench.editor.empty.hint": "hidden",
+    "terminal.integrated.initialHint": false,
     "github.copilot.enable": {
         "*": false,
     },
