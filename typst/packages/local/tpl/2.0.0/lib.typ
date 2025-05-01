@@ -12,7 +12,7 @@
   thm-numbering: thm-numbering-linear
 )
 
-#let (claim, rules: claim-rules) = new-theorems("thm-group",
+#let (claim, rules: claim-rules) = new-theorems("thm-group-claim",
   ("claim": "Claim"),
   thm-numbering: thm-numbering-linear
 )
@@ -46,6 +46,7 @@
 ///// custom /////
 #let pr(x) = [*#x* #quad] 
 
+#import "@preview/quick-maths:0.2.1": shorthands
 #let conf(
   homework: none,
   lecture: none,
@@ -85,12 +86,12 @@
   show math.equation: set block(breakable: true) // https://github.com/typst/typst/pull/4226#issue-2311216543
   show math.equation.where(block: false): math.display // https://forum.typst.app/t/how-can-i-use-display-mode-for-in-line-math/1179/2
 
-  import "@preview/quick-maths:0.2.1": shorthands
   show: shorthands.with(
     ($*$, $dot$),
     ($...$, $dots.c$),
     ($+-$, $plus.minus$),
-    ($-+$, $minus.plus$)
+    ($-+$, $minus.plus$),
+    ($||$, $mid(\|)$)
   )
 
   ///// content /////
