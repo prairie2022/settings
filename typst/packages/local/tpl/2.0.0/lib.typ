@@ -36,10 +36,10 @@
 
 ///// math /////
 #let ags(x) = $lr(angle.l #x angle.r)$
-#let eps = $epsilon$
-#let itg = $integral$
+#let eps = math.epsilon
+#let itg = math.integral
 #let quad = h(10pt)
-#let big(x) = $lr( #x , size: #150%)$
+#let big(x) = math.lr(x, size: 150%)
 #let pmod(x) = $#h(5pt) (mod #x)$
 
 
