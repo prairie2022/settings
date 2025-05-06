@@ -41,7 +41,7 @@
 #let quad = h(10pt)
 #let big(x) = math.lr(x, size: 150%)
 #let pmod(x) = $#h(5pt) (mod #x)$
-
+#let align(..x) = math.cases(delim: none, ..x)
 
 ///// custom /////
 #let pr(x) = [*#x* #quad] 
