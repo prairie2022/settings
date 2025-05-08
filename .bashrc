@@ -28,6 +28,7 @@ unset rc
 # alias
 export wst="b13902105@ws4.csie.ntu.edu.tw"
 alias diary="sudo veracrypt ~/Desktop/diary.hc"
+alias yraid="sudo veracrypt --dismount -f"
 alias sync_psweb="rclone sync ~/Desktop/remote/htdocs psweb: --progress --track-renames"
 alias coding="cd ~/Desktop/code/ && ls"
 alias cp="cp -i" # preventing overwrite
