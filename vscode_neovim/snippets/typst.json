@@ -23,5 +23,12 @@
 	},
 	"operator": {
 		"body": "op(\"$1\")"
+	},
+	"image": {
+		"body": [
+			"#figure(",
+			"  image(\"$1\")",
+			")"
+		]
 	}
 }
