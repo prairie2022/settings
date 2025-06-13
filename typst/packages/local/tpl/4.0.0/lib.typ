@@ -50,13 +50,13 @@
 #let maketitle(
   /// The title of the document.
   /// -> string | content
-  title: "",
+  title,
   /// The authors of the document.
   /// -> array
-  authors: (),
+  authors: ("卓育安",),
   /// The date of the document.
   /// -> string | content | datetime
-  date: none,
+  date: datetime.today().display("[month repr:long] [day], [year]"),
 ) = {
   // Author information.
 
