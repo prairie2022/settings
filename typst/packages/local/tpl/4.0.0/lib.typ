@@ -98,7 +98,7 @@
   doc
 ) = {
   // fonts
-  show regex("[\p{scx:Han}]"): set text(font: "Noto Serif CJK TC") // https://github.com/typst/typst/issues/794
+  set text(font: "Noto Serif CJK TC")
 
   ///// fancy header & footer /////
 
